@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TASK-7</title>
+    <style>
+        *{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: rgb(184, 60, 60); padding: 30px;  width:400px;">
+        <div style="background-color: rgb(149, 56, 185); margin: 10px; padding: 10px; padding-left: 20px;">
+            <form>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" placeholder="your name"/></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" placeholder="your email"/></td>
+                    </tr>
+                    <tr>
+                        <td>password:</td>
+                        <td><input type="password" /></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td><input type="tel" /></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td>
+                            <label for="male">Male: </label>
+                            <input type="radio" id="male" name="gender">
+                            <label for="female">Female: </label>
+                            <input type="radio" id="female" name="gender">
+                            <label for="other">Other: </label>
+                            <input type="radio" id="other" name="gender">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>language:</td>
+                        <td>
+                            <select>
+                                <option>Select Language</option>
+                                <option>Telugu</option>
+                                <option>Hindi</option>
+                                <option>English</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Zip Code:</td>
+                        <td><input type="number"/></td>
+                    </tr>
+                    <tr>
+                        <td>About:</td>
+                        <td><textarea cols="20" rows="3" placeholder="Write about yourself"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Register" style="background-color: white; color: black; border: 0px; width: 300px; text-align: center;"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

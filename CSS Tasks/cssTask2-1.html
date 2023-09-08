@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TASK-2</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            width: 200px;
+            background-color: #9fe0f0;
+        }
+        li a {
+            display: block;
+            color: #1512c5;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+        li a.active {
+            background-color: #f5ce4d;
+            color: white;
+        }
+        li a:hover:not(.active) {
+            background-color: #5aee46;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#java">Java</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#bootstrap">Bootstrap</a></li>
+      </ul>
+</body>
+</html>

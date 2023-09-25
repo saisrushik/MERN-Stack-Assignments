@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JsTask-2</title>
+</head>
+<body>
+    <script>
+        function Order(word){
+            split =  word.split('');
+            sort = split.sort();
+            final =  sort.join('');
+            return final;
+        }
+        const word = prompt("Enter Your text here","webmaster");
+        const result = Order(word);
+        console.log("Example string : " + word);
+        console.log("Expected Output : " + result)
+    </script>
+</body>
+</html>

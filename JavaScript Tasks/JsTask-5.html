@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JsTask-5</title>
+    <style>
+      #one {
+        text-align: right;
+      }
+      table {
+        margin: auto;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function myFunction() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let web = document.getElementById("web").value;
+        let msg = document.getElementById("msg").value;
+        let hasErrors = false;
+        var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+        var regWeb =
+          /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+        if (name == null || name == "") {
+          document.getElementById("error1").innerHTML =
+            "This field is required";
+          document.getElementById("name").style.borderColor = "red";
+          document.getElementById("name").style.borderWidth = "3px";
+          hasErrors = true;
+        } else {
+          document.getElementById("error1").innerHTML = "";
+          document.getElementById("name").style.borderColor = "";
+          document.getElementById("name").style.borderWidth = "";
+        }
+        if (email == "" || !regEmail.test(email)) {
+          document.getElementById("error2").innerHTML =
+            "A valid email address is required";
+          document.getElementById("email").style.borderColor = "red";
+          document.getElementById("email").style.borderWidth = "3px";
+          hasErrors = true;
+        } else {
+          document.getElementById("error2").innerHTML = "";
+          document.getElementById("email").style.borderColor = "";
+          document.getElementById("email").style.borderWidth = "";
+        }
+        if (web == "" || !regWeb.test(web)) {
+          document.getElementById("error3").innerHTML =
+            "A valid URL is required";
+          document.getElementById("web").style.borderColor = "red";
+          document.getElementById("web").style.borderWidth = "3px";
+          hasErrors = true;
+        } else {
+          document.getElementById("error3").innerHTML = "";
+          document.getElementById("web").style.borderColor = "";
+          document.getElementById("web").style.borderWidth = "";
+        }
+        if (msg == null || msg == "") {
+          document.getElementById("error4").innerHTML =
+            "This field is required";
+          document.getElementById("msg").style.borderColor = "red";
+          document.getElementById("msg").style.borderWidth = "3px";
+          hasErrors = true;
+        } else {
+          document.getElementById("error4").innerHTML = "";
+          document.getElementById("msg").style.borderColor = "";
+          document.getElementById("msg").style.borderWidth = "";
+        }
+        return !hasErrors;
+      }
+    </script>
+    <form onsubmit="return myFunction()">
+      <table>
+        <tr>
+          <td id="one">
+            <label for="name">Name : </label>
+          </td>
+          <td>
+            <input type="text" id="name" />
+            <span class="error" id="error1"></span>
+          </td>
+        </tr>
+        <tr>
+          <td id="one">
+            <label for="email">Email : </label>
+          </td>
+          <td>
+            <input type="email" id="email" />
+            <span class="error" id="error2"></span>
+          </td>
+        </tr>
+        <tr>
+          <td id="one">
+            <label for="web">Website : </label>
+          </td>
+          <td>
+            <input type="text" id="web" />
+            <span class="error" id="error3"></span>
+          </td>
+        </tr>
+        <tr>
+          <td id="one">
+            <label for="msg">Message : </label>
+          </td>
+          <td>
+            <textarea id="msg" rows="5" cols="25"></textarea>
+            <span class="error" id="error4"></span>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Submit" onclick="myFunction()" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

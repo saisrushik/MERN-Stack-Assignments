@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BsTask-6</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center bg-light"
+      style="margin-top: 40px; height: 600px; width: 600px"
+    >
+      <form>
+        <div class="col-12 mt-5">
+          <label for="validationServer01" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="validationServer01"
+            required
+          />
+          <div class="invalid-feedback">Name is required</div>
+        </div>
+        <br />
+        <div class="col-12 g-3">
+          <label for="validationServer02" class="form-label">Email</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="validationServer02"
+            required
+          />
+          <div class="invalid-feedback">Email is required</div>
+        </div>
+        <br />
+        <div class="col-12">
+          <label for="validationServerUsername" class="form-label"
+            >Password</label
+          >
+          <div class="input-group has-validation">
+            <input
+              type="text"
+              class="form-control is-invalid"
+              id="validationServerUsername"
+              aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+              required
+            />
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+              Password is required
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="col-12">
+          <label for="validationServerUsername" class="form-label"
+            >Hobbies</label
+          >
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected></option>
+            <option value="1">Playing</option>
+            <option value="2">Reading</option>
+            <option value="3">Studying</option>
+          </select>
+        </div>
+        <br />
+        <div class="col-12">
+          <button class="btn btn-danger col-12" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
